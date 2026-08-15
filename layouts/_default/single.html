@@ -8,6 +8,14 @@
   {{ with .Params.author }}· {{.}}{{ end }}
 </p>
 {{ end }}
+<!-- Table of Contents start -->
+{{ if and (ne .Params.toc false) (gt (len .TableOfContents) 0) }}
+  <details class="toc-container" {{ if .Params.toc_open }}open{{ end }}>
+    <summary class="toc-title">Table of Contents</summary>
+    {{ .TableOfContents }}
+  </details>
+{{ end }}
+<!-- Table of Contents end -->
 <content>
   {{ .Content }}
 </content>
