@@ -24,7 +24,7 @@
 :root {
   --font-body: 'Lora', Georgia, 'Times New Roman', serif, 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  --font-heading: 'Space Grotesk', Verdana, 'Segoe UI', sans-serif,
+  --font-heading: 'Lora', Verdana, 'Segoe UI', sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji';
   --font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo,
     Consolas, 'DejaVu Sans Mono', monospace;

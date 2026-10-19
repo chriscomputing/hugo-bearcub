@@ -17,7 +17,7 @@
   <!-- Preload self-hosted webfonts (declared in original.css) -->
   <link rel="preload" as="font" type="font/woff2" href="{{ relURL "fonts/Lora-VariableFont_wght.woff2" }}" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="{{ relURL "fonts/Lora-Italic-VariableFont_wght.woff2" }}" crossorigin>
-  <link rel="preload" as="font" type="font/woff2" href="{{ relURL "fonts/SpaceGrotesk-VariableFont_wght.woff2" }}" crossorigin>
+  <!-- <link rel="preload" as="font" type="font/woff2" href="{{ relURL "fonts/SpaceGrotesk-VariableFont_wght.woff2" }}" crossorigin> -->
 
   {{ if (.Page.Store.Get "hasCodeBlock") }}
     {{ $syntax := resources.Get "syntax.css" | minify }}
