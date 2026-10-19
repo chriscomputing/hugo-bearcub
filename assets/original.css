@@ -1,5 +1,37 @@
+/* Self-hosted webfonts (OFL-licensed, see /fonts/*-OFL.txt) */
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/Lora-VariableFont_wght.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/Lora-Italic-VariableFont_wght.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url('/fonts/SpaceGrotesk-VariableFont_wght.woff2') format('woff2');
+}
+
+:root {
+  --font-body: 'Lora', Georgia, 'Times New Roman', serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-heading: 'Space Grotesk', Verdana, 'Segoe UI', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji';
+  --font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo,
+    Consolas, 'DejaVu Sans Mono', monospace;
+}
+
 body {
-  font-family: Verdana, sans-serif;
+  font-family: var(--font-body);
   margin: auto;
   padding: 20px;
   max-width: 720px;
@@ -9,6 +41,17 @@ body {
   overflow-wrap: break-word;
   line-height: 1.5;
   color: #c9d1d9;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.title,
+nav {
+  font-family: var(--font-heading);
 }
 
 h1,
@@ -79,6 +122,7 @@ img {
 }
 
 code {
+  font-family: var(--font-mono);
   padding: 2px 5px;
   color: #f8f8f2;
   background-color: #282a36;
