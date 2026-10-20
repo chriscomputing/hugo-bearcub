@@ -99,6 +99,15 @@
   --alert-danger-fg: var(--palette-alert-danger-fg);
   --alert-danger-border: var(--palette-alert-danger-border);
   --alert-danger-bg: var(--palette-alert-danger-bg);
+
+  /*
+   * Code blocks (<pre>): identical in both color schemes, because
+   * syntax.css (Dracula) is what highlights them and it is only readable on
+   * the dark code palette. Inline <code> instead follows the scheme — see
+   * --color-code-background in the light block below.
+   */
+  --color-code-block-background: var(--palette-code-background);
+  --color-code-block-text: var(--palette-code-text);
 }
 
 @media (prefers-color-scheme: light) {
@@ -238,6 +247,8 @@ code {
 pre code {
   display: block;
   padding: 20px;
+  color: var(--color-code-block-text);
+  background-color: var(--color-code-block-background);
   white-space: pre-wrap;
   font-size: 14px;
   overflow-x: auto;
