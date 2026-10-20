@@ -31,42 +31,44 @@
     Consolas, 'DejaVu Sans Mono', monospace;
 
   /* Surfaces */
-  --color-background: #1d1f27;
+  --color-bg: #141A12;
   --color-surface: #252525;
   --color-surface-text: #ddd;
   --color-code-background: #282a36;
 
   /* Text */
-  --color-text: #c9d1d9;
-  --color-text-heading: #eee;
-  --color-text-muted: #ccc;
-  --color-text-subtle: #aaa;
+  --color-fg: #c9d1d9;
+  --color-fg-heading: #eee;
+  --color-fg-muted: #ccc;
   --color-code-text: #f8f8f2;
 
   /* Links */
-  --color-link: #8cc2dd;
-  --color-link-visited: #8b6fcb;
+  --color-link: #00c59e;
 
   /* Borders */
   --color-border: #c9d1d9;
   --color-border-subtle: #999;
 
   /* Feedback */
-  --color-error-text: #eba613;
+  --color-error-fg: #eba613;
 
   /* Alert boxes */
-  --color-alert-info-background: #f0f9ff;
-  --color-alert-info-border: #60a5fa;
-  --color-alert-info-text: #1e3a8a;
-  --color-alert-warning-background: #fffbeb;
-  --color-alert-warning-border: #f59e0b;
-  --color-alert-warning-text: #92400e;
-  --color-alert-success-background: #ecfdf5;
-  --color-alert-success-border: #10b981;
-  --color-alert-success-text: #065f46;
-  --color-alert-danger-background: #fff1f2;
-  --color-alert-danger-border: #ef4444;
-  --color-alert-danger-text: #7f1d1d;
+  --alert-info-fg: #f0f9ff;
+  --alert-info-border: #60a5fa;
+  --alert-info-bg: #1e3a8a;
+  --alert-warning-fg: #fffbeb;
+  --alert-warning-border: #f59e0b;
+  --alert-warning-bg: #92400e;
+  --alert-success-fg: #ecfdf5;
+  --alert-success-border: #10b981;
+  --alert-success-bg: #065f46;
+  --alert-danger-fg: #fff1f2;
+  --alert-danger-border: #ef4444;
+  --alert-danger-bg: #7f1d1d;
+}
+
+@media (prefers-color-scheme: light) {
+  
 }
 
 body {
@@ -75,11 +77,11 @@ body {
   padding: 20px;
   max-width: 720px;
   text-align: left;
-  background-color: var(--color-background);
+  background-color: var(--color-bg);
   word-wrap: break-word;
   overflow-wrap: break-word;
   line-height: 1.5;
-  color: var(--color-text);
+  color: var(--color-fg);
 }
 
 h1,
@@ -101,7 +103,7 @@ h5,
 h6,
 strong,
 b {
-  color: var(--color-text-heading);
+  color: var(--color-fg-heading);
 }
 
 a {
@@ -178,7 +180,7 @@ pre code {
 
 blockquote {
   border-left: 1px solid var(--color-border-subtle);
-  color: var(--color-text-muted);
+  color: var(--color-fg-muted);
   padding-left: 20px;
   font-style: italic;
 }
@@ -188,13 +190,8 @@ footer {
   text-align: center;
 }
 
-.helptext {
-  color: var(--color-text-subtle);
-  font-size: small;
-}
-
 .errorlist {
-  color: var(--color-error-text);
+  color: var(--color-error-fg);
   font-size: small;
 }
 
@@ -213,9 +210,6 @@ ul.blog-posts li span {
   flex: 0 0 130px;
 }
 
-ul.blog-posts li a:visited {
-  color: var(--color-link-visited);
-}
 
 a.blog-tags {
   line-height: 2;
@@ -242,7 +236,7 @@ p.byline {
   top: 5;
   transform: translateY(-600%);
   transition: transform 0.5s;
-  background-color: var(--color-background);
+  background-color: var(--color-bg);
   padding: 6px;
 }
 
@@ -259,7 +253,7 @@ figcaption > p {
   margin-block-start: 0px;
   text-align: center;
   font-style: italic;
-  color: var(--color-text-muted);
+  color: var(--color-fg-muted);
 }
 
 /* Alert / info / warning boxes */
@@ -279,22 +273,22 @@ figcaption > p {
 
 /* Types */
 .alert-info {
-  background: var(--color-alert-info-background);
-  border-color: var(--color-alert-info-border);
-  color: var(--color-alert-info-text);
+  background: var(--alert-info-bg);
+  border-color: var(--alert-info-border);
+  color: var(--alert-info-fg);
 }
 .alert-warning {
-  background: var(--color-alert-warning-background);
-  border-color: var(--color-alert-warning-border);
-  color: var(--color-alert-warning-text);
+  background: var(--alert-warning-bg);
+  border-color: var(--alert-warning-border);
+  color: var(--alert-warning-fg);
 }
 .alert-success {
-  background: var(--color-alert-success-background);
-  border-color: var(--color-alert-success-border);
-  color: var(--color-alert-success-text);
+  background: var(--alert-success-bg);
+  border-color: var(--alert-success-border);
+  color: var(--alert-success-fg);
 }
 .alert-danger {
-  background: var(--color-alert-danger-background);
-  border-color: var(--color-alert-danger-border);
-  color: var(--color-alert-danger-text);
+  background: var(--alert-danger-bg);
+  border-color: var(--alert-danger-border);
+  color: var(--alert-danger-fg);
 }
