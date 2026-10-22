@@ -116,7 +116,7 @@
     color-scheme: light;
 
     --color-bg: var(--palette-fg-heading);
-    --color-surface: var(--palette-code-text);
+    --color-surface: var(--palette-surface-text);
     --color-surface-text: var(--palette-surface);
     --color-code-background: var(--palette-surface-text);
 
@@ -128,7 +128,7 @@
     --color-link: var(--palette-link-dark);
 
     --color-border: var(--palette-border-subtle);
-    --color-border-subtle: var(--palette-surface-text);
+    --color-border-subtle: var(--palette-border);
 
     --color-error-fg: var(--palette-alert-warning-bg);
 
@@ -376,4 +376,45 @@ figcaption > p {
   background: var(--alert-danger-bg);
   border-color: var(--alert-danger-border);
   color: var(--alert-danger-fg);
+}
+
+/* Table of Contents */
+.toc-container {
+  background-color: var(--color-surface);
+  border-left: 0.25rem solid var(--color-border-subtle);
+  border-radius: 0.375rem;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.toc-title {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--color-fg-heading);
+  cursor: pointer;
+}
+
+#TableOfContents {
+  margin: 0.5rem 0 0;
+}
+
+#TableOfContents ul {
+  list-style: none;
+  padding-left: 1rem;
+  margin: 0.25rem 0;
+}
+
+#TableOfContents li {
+  margin: 0.25rem 0;
+}
+
+#TableOfContents a {
+  color: var(--color-fg-muted);
+  font-weight: 400;
+  text-decoration: none;
+}
+
+#TableOfContents a:hover {
+  color: var(--color-link);
+  text-decoration: underline;
 }

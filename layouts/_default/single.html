@@ -11,7 +11,7 @@
 <!-- Table of Contents start -->
 {{ if and (ne .Params.toc false) (gt (len .TableOfContents) 0) }}
   <details class="toc-container" {{ if .Params.toc_open }}open{{ end }}>
-    <summary class="toc-title">Table of Contents</summary>
+    <summary class="toc-title">{{ i18n "table-of-contents" }}</summary>
     {{ .TableOfContents }}
   </details>
 {{ end }}
