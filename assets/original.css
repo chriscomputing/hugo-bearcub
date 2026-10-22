@@ -301,6 +301,11 @@ a.blog-tags {
   text-decoration: none;
 }
 
+a.blog-tags:hover {
+  color: var(--color-link);
+  text-decoration: underline;
+}
+
 h3.blog-filter {
   margin-bottom: 0;
 }
