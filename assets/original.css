@@ -47,6 +47,7 @@
 
   /* Links */
   --palette-link: #00c59e;
+  --palette-link-dark: #065f46;
 
   /* Borders */
   --palette-border: #c9d1d9;
@@ -124,7 +125,7 @@
     --color-fg-muted: var(--palette-surface);
     --color-code-text: var(--palette-code-background);
 
-    --color-link: var(--palette-alert-success-bg);
+    --color-link: var(--palette-link-dark);
 
     --color-border: var(--palette-border-subtle);
     --color-border-subtle: var(--palette-surface-text);
