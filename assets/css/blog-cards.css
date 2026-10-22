@@ -10,12 +10,15 @@
 .blog-card {
   position: relative;
   background-color: var(--color-surface);
-  border: 1px solid var(--color-border-subtle);
-  border-radius: 0.75rem;
   overflow: hidden;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
+  border: 0.1rem solid var(--color-surface);
+  border-radius: 0.75rem;
 }
 
+.blog-card:hover {
+  border: 0.1rem solid var(--color-link);
+}
 /* The title anchor stretches over the entire card (see ::after below) */
 .blog-card-link {
   color: inherit;
@@ -101,17 +104,4 @@ ul.blog-card-tags {
   gap: 0.5rem;
   padding: 0;
   margin: 0 0 1rem;
-}
-
-
-/* "Read" button */
-.blog-card-cta {
-  align-self: flex-start;
-  padding: 0.4375rem 1.125rem;
-  border-radius: 999px;
-  background-color: var(--color-link);
-  color: var(--color-bg);
-  font-family: var(--font-heading);
-  font-weight: 600;
-  font-size: 0.9375rem;
 }
