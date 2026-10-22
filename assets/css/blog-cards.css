@@ -103,15 +103,6 @@ ul.blog-card-tags {
   margin: 0 0 1rem;
 }
 
-.blog-card-tag {
-  padding: 0.1875rem 0.625rem;
-  border-radius: 999px;
-  background-color: var(--color-bg);
-  border: 1px solid var(--color-border-subtle);
-  color: var(--color-fg-muted);
-  font-size: 0.8125rem;
-  white-space: nowrap;
-}
 
 /* "Read" button */
 .blog-card-cta {
