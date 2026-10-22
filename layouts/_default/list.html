@@ -34,13 +34,13 @@
     </li>
     {{ end }}
   </ul>
+  {{ end }}
   {{ if not .Data.Singular }}
     <div>
       {{ range .Site.Taxonomies.tags }}
         <a class="blog-tags" href="{{ .Page.RelPermalink }}">#{{ lower .Page.Title }}</a>
       {{ end }}
     </div>
-  {{ end }}
   {{ end }}
 </content>
 {{ end }}
