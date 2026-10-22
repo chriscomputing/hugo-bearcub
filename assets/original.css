@@ -182,7 +182,12 @@ b {
 }
 
 a {
-  color: var(--color-link);
+  color: currentColor;
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: var(--color-link);
+  text-decoration-thickness: 0.15em;
+  text-underline-offset: 0.12em;
 }
 
 .title {
