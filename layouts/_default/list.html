@@ -3,7 +3,7 @@
   {{ if .Data.Singular }}
     <h3 class="blog-filter">{{ i18n "filtering-for" }} "{{ .Title }}"</h3>
   {{ end }}
-  {{ if and .Site.Params.cardList (eq .Kind "section") }}
+  {{ if and .Site.Params.cardList (in (slice "section" "term") .Kind) }}
   <div class="blog-card-grid">
     {{ range .Pages }}
       {{ partial "blog-card.html" . }}

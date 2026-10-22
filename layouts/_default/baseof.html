@@ -14,7 +14,7 @@
   {{ $style := print (default "original" .Site.Params.themeStyle) ".css" | resources.Get | minify }}
   <link href="{{ $style.RelPermalink }}" rel="stylesheet">
 
-  {{ if and .Site.Params.cardList (eq .Kind "section") }}
+  {{ if and .Site.Params.cardList (in (slice "section" "term") .Kind) }}
   {{ $cards := resources.Get "css/blog-cards.css" | minify }}
   <link href="{{ $cards.RelPermalink }}" rel="stylesheet">
   {{ end }}
