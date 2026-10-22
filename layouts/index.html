@@ -1,3 +1,10 @@
 {{ define "main" }}
 {{ .Content }}
+{{ $featured := where .Site.RegularPages "Params.featured" true }}
+{{ if $featured }}
+<section class="featured-posts">
+  <h2>{{ i18n "featured-posts" }}</h2>
+  {{ partial "post-list.html" (dict "page" . "pages" $featured.ByDate.Reverse) }}
+</section>
+{{ end }}
 {{ end }}

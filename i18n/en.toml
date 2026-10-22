@@ -17,3 +17,6 @@
   other = "Content"
 [read]
   other = "Read"
+
+[featured-posts]
+  other = "Recommended posts"

@@ -1,0 +1,29 @@
+{{- /*
+  Classic compact post list (Bear Cub default view).
+  Context: a dict with
+    "page"  – the page calling this partial (for .Site params)
+    "pages" – the page collection to render
+*/ -}}
+{{- $page := .page -}}
+<ul class="blog-posts">
+  {{ range .pages }}
+  <li>
+    <span>
+      <i>
+        <time datetime='{{ .Date.Format "2006-01-02" }}' pubdate>
+          {{ .Date.Format (default "2006-01-02" $page.Site.Params.dateFormat) }}
+        </time>
+      </i>
+    </span>
+    {{ if .Params.link }}
+      <a href="{{ .Params.link }}" target="_blank">{{ .Title }} ↪</a>
+    {{ else }}
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{ end }}
+  </li>
+  {{ else }}
+  <li>
+    {{ i18n "no-posts" }}
+  </li>
+  {{ end }}
+</ul>
