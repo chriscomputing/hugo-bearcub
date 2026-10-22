@@ -286,7 +286,7 @@ ul.blog-posts {
 
 ul.blog-posts li {
   display: flex;
-  margin-bottom: 0.625rem;
+  margin-bottom: 1rem;
 }
 
 ul.blog-posts li span {
