@@ -14,6 +14,11 @@
   {{ $style := print (default "original" .Site.Params.themeStyle) ".css" | resources.Get | minify }}
   <link href="{{ $style.RelPermalink }}" rel="stylesheet">
 
+  {{ if and .Site.Params.cardList (eq .Kind "section") }}
+  {{ $cards := resources.Get "css/blog-cards.css" | minify }}
+  <link href="{{ $cards.RelPermalink }}" rel="stylesheet">
+  {{ end }}
+
   <!-- Preload self-hosted webfonts (declared in original.css) -->
   <link rel="preload" as="font" type="font/woff2" href="{{ relURL "fonts/Lora-VariableFont_wght.woff2" }}" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="{{ relURL "fonts/Lora-Italic-VariableFont_wght.woff2" }}" crossorigin>

@@ -3,6 +3,15 @@
   {{ if .Data.Singular }}
     <h3 class="blog-filter">{{ i18n "filtering-for" }} "{{ .Title }}"</h3>
   {{ end }}
+  {{ if and .Site.Params.cardList (eq .Kind "section") }}
+  <div class="blog-card-grid">
+    {{ range .Pages }}
+      {{ partial "blog-card.html" . }}
+    {{ else }}
+      <p>{{ i18n "no-posts" }}</p>
+    {{ end }}
+  </div>
+  {{ else }}
   <ul class="blog-posts">
     {{ range .Pages }}
     <li>
@@ -31,6 +40,7 @@
         <a class="blog-tags" href="{{ .Page.RelPermalink }}">#{{ lower .Page.Title }}</a>
       {{ end }}
     </div>
+  {{ end }}
   {{ end }}
 </content>
 {{ end }}

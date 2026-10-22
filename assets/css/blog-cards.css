@@ -1,0 +1,121 @@
+/* Card grid for the blog index (/blog) */
+
+.blog-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.blog-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.25);
+}
+
+/* Stretch the link over the whole card */
+.blog-card-link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.blog-card-image {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background-color: var(--color-code-block-background);
+}
+
+.blog-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Fallback when a post has no image */
+.blog-card-image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--color-code-block-background),
+      var(--color-surface));
+}
+
+/* Date badge on top of the image */
+.blog-card-date {
+  position: absolute;
+  left: 0.75rem;
+  bottom: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  background-color: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  font-size: 0.8125rem;
+  font-style: normal;
+}
+
+.blog-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1.25rem;
+}
+
+.blog-card-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.125rem;
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+.blog-card-link:hover .blog-card-title {
+  color: var(--color-link);
+}
+
+.blog-card-desc {
+  margin: 0 0 1rem;
+  color: var(--color-fg-muted);
+  font-size: 0.9375rem;
+  flex: 1;
+}
+
+/* Tags */
+ul.blog-card-tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+
+.blog-card-tag {
+  padding: 0.1875rem 0.625rem;
+  border-radius: 999px;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border-subtle);
+  color: var(--color-fg-muted);
+  font-size: 0.8125rem;
+  white-space: nowrap;
+}
+
+/* "Read" button */
+.blog-card-cta {
+  align-self: flex-start;
+  padding: 0.4375rem 1.125rem;
+  border-radius: 999px;
+  background-color: var(--color-link);
+  color: var(--color-bg);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.9375rem;
+}
