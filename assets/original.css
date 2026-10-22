@@ -148,6 +148,7 @@
 
 body {
   font-family: var(--font-body);
+  zoom: 1.1;
   margin: auto;
   padding: 20px;
   max-width: 720px;
