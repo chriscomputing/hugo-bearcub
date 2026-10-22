@@ -298,6 +298,7 @@ ul.blog-posts li span {
 a.blog-tags {
   line-height: 2;
   margin-right: 0.75rem;
+  text-decoration: none;
 }
 
 h3.blog-filter {
